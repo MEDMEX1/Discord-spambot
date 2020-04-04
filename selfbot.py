@@ -151,8 +151,21 @@ async def message(ctx):
     terraria3 = client.get_channel(251116850132287490)
     await terraria3.send("Yeah")
     print("terraria3 sent")
-    await asyncio.sleep(600)
-    print("completed one message cycle, next one in 10 minutes")
+    print("completed one message cycle, next one in 0.5-2m")
+    cyclecooldown = r.randint(30,120)
+    await asyncio.sleep(cyclecooldown)
+
+@client.command(pass_context=True)
+async def yo(ctx):
+    guild = ctx.message.guild
+    dmdelay = r.randint(29,54)
+    for member in guild.members:
+     await asyncio.sleep(dmdelay)
+     try:
+       await member.send("Hey")
+       print("DM sent")
+     except:
+       pass
 
 
 
