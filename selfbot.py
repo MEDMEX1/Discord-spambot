@@ -6,6 +6,7 @@ import asyncio
 import time
 import logging
 import random as r
+import requests
 
 client = commands.Bot(command_prefix='$', self_bot=True)
 
@@ -13,26 +14,6 @@ client = commands.Bot(command_prefix='$', self_bot=True)
 async def on_ready():
   print("Ready")
 
-
-  
-@client.command(pass_context=True)
-async def links(ctx):
-  channel = ctx.message.channel
-  await channel.send("https://discord.gg/fortnite")
-  await asyncio.sleep(1)
-  await channel.send("https://discord.gg/rust")
-  await asyncio.sleep(1)
-  await channel.send("https://discord.gg/lol")
-  await asyncio.sleep(1)
-  await channel.send("https://discord.gg/temtem")
-  await asyncio.sleep(1)
-  await channel.send("https://discord.gg/overwatch")
-  await asyncio.sleep(1)
-  await channel.send("https://discord.gg/rocketleague")
-  await asyncio.sleep(1)
-  await channel.send("https://discord.gg/callofduty")
-  await asyncio.sleep(1)
-  await channel.send("https://discord.gg/terraria")
 
 @client.command(pass_context=True)
 async def timer(ctx):
@@ -95,6 +76,32 @@ async def yo(ctx):
      except:
        pass
 
+@client.command(pass_context=True)
+async def join(ctx):
+  requests.post("https://discordapp.com/api/v6/invites/fortnite",headers={'authorization':''})
+  print("Joined fortnite")
+  await asyncio.sleep(1)
+  requests.post("https://discordapp.com/api/v6/invites/rust",headers={'authorization':''})
+  print("Joined Rust")
+  await asyncio.sleep(1)
+  requests.post("https://discordapp.com/api/v6/invites/lol",headers={'authorization':''})
+  print("Joined LoL")
+  await asyncio.sleep(1)
+  requests.post("https://discordapp.com/api/v6/invites/temtem",headers={'authorization':''})
+  print("Joined temtem")
+  await asyncio.sleep(1)
+  requests.post("https://discordapp.com/api/v6/invites/overwatch",headers={'authorization':''})
+  print("Joined overwatch")
+  await asyncio.sleep(1)
+  requests.post("https://discordapp.com/api/v6/invites/rocketleague",headers={'authorization':''})
+  print("Joined rocketleague")
+  await asyncio.sleep(1)
+  requests.post("https://discordapp.com/api/v6/invites/callofduty",headers={'authorization':''})
+  print("Joined callofduty")
+  await asyncio.sleep(1)
+  requests.post("https://discordapp.com/api/v6/invites/terraria",headers={'authorization':''})
+  print("Joined terraria")
+  print("Joined all servers")
 
 
 
