@@ -11,19 +11,9 @@ client = commands.Bot(command_prefix='$', self_bot=True)
 
 @client.event
 async def on_ready():
-    print("Ready")
+  print("Ready")
 
 
-@client.command(pass_context=True)
-async def dm(ctx):
-    guild = ctx.message.guild
-    for member in guild.members:
-     await asyncio.sleep(10)
-     try:
-       await member.send("test")
-       print("Sent message")
-     except:
-       pass
   
 @client.command(pass_context=True)
 async def links(ctx):
@@ -151,6 +141,70 @@ async def message(ctx):
     terraria3 = client.get_channel(251116850132287490)
     await terraria3.send("Yeah")
     print("terraria3 sent")
+    await asyncio.sleep(rnum)
+    overwatch4 = client.get_channel(94882524378968064)
+    await overwatch4.send("Who's hyped for the next tourney?")
+    print("overwatch4 sent")
+    await asyncio.sleep(rnum)
+    callofduty4 = client.get_channel(220018067227410432)
+    await callofduty4.send('What is the best gun to use?')
+    print("callofduty4 sent")
+    await asyncio.sleep(rnum)
+    fortnite4 = client.get_channel(338017726394138624)
+    await fortnite4.send("Who is your favorite player?")
+    print("fortnite4 sent")
+    await asyncio.sleep(rnum)
+    leagueoflegends4 = client.get_channel(125440014904590336)
+    await leagueoflegends4.send("Who is the best streamer?")
+    print("leagueoflegends4 sent")
+    await asyncio.sleep(rnum)
+    rocketleague4 = client.get_channel(180720102033981440)
+    await rocketleague4.send("What's the best decal?")
+    print("rocketleague4 sent")
+    await asyncio.sleep(rnum)
+    rust4 = client.get_channel(560127830621683725)
+    await rust4.send("Hey")
+    print("rust4 sent")
+    await asyncio.sleep(rnum)
+    temtem4 = client.get_channel(428181186528018444)
+    await temtem4.send("Yo what's going on")
+    print("temtem4 sent")
+    await asyncio.sleep(rnum)
+    terraria4 = client.get_channel(251116850132287490)
+    await terraria4.send("This game dope.")
+    print("terraria4 sent")
+    await asyncio.sleep(rnum)
+    overwatch5 = client.get_channel(94882524378968064)
+    await overwatch5.send("All good here?")
+    print("overwatch5 sent")
+    await asyncio.sleep(rnum)
+    callofduty5 = client.get_channel(220018067227410432)
+    await callofduty5.send('Is this game better than fn?')
+    print("callofduty5 sent")
+    await asyncio.sleep(rnum)
+    fortnite5 = client.get_channel(338017726394138624)
+    await fortnite5.send("Peely is cool ig")
+    print("fortnite5 sent")
+    await asyncio.sleep(rnum)
+    leagueoflegends5 = client.get_channel(125440014904590336)
+    await leagueoflegends5.send("Yup")
+    print("leagueoflegends5 sent")
+    await asyncio.sleep(rnum)
+    rocketleague5 = client.get_channel(180720102033981440)
+    await rocketleague5.send("I haven't played this in forever, alot change?")
+    print("rocketleague5 sent")
+    await asyncio.sleep(rnum)
+    rust5 = client.get_channel(560127830621683725)
+    await rust5.send("Yikes")
+    print("rust5 sent")
+    await asyncio.sleep(rnum)
+    temtem5 = client.get_channel(428181186528018444)
+    await temtem5.send("Anyone listen to drake?")
+    print("temtem5 sent")
+    await asyncio.sleep(rnum)
+    terraria5 = client.get_channel(251116850132287490)
+    await terraria5.send("Who is the best yter?")
+    print("terraria5 sent")
     print("completed one message cycle, next one in 0.5-2m")
     cyclecooldown = r.randint(30,120)
     await asyncio.sleep(cyclecooldown)
@@ -168,21 +222,6 @@ async def yo(ctx):
        pass
 
 
-
-
-
-
-
-
-@client.command(pass_context=True)
-async def test(ctx):
-  var = 1
-  while var == 1 :
-    randomnum = r.randint(5,10)
-    print('test')
-    await asyncio.sleep(randomnum)
-    print('test2')
-    await asyncio.sleep(randomnum)
 
 
 
