@@ -66,7 +66,7 @@ async def message(ctx):
 @client.command(pass_context=True)
 async def yo(ctx):
     guild = ctx.message.guild
-    dmdelay = r.randint(2,10)
+    dmdelay = r.randint(23,43)
     for member in guild.members:
      await asyncio.sleep(dmdelay)
      try:
