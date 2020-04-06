@@ -8,11 +8,21 @@ import logging
 import random as r
 import requests
 
+startup_extensions = ["cog_errorhandler"]
+
 client = commands.Bot(command_prefix='$', self_bot=True)
 
 @client.event
 async def on_ready():
   print("Ready")
+
+@client.command()
+async def load(extension_name : str):
+    """Loads an extension."""
+    try:
+        client.load_extension(extension_name)
+    except (AttributeError, ImportError) as e:
+      print("Loaded")
 
 
 @client.command(pass_context=True)
@@ -66,15 +76,17 @@ async def message(ctx):
 @client.command(pass_context=True)
 async def yo(ctx):
     guild = ctx.message.guild
-    dmdelay = r.randint(23,43)
-    for member in guild.members:
-     await asyncio.sleep(dmdelay)
-     try:
-        messages = messages = ["Yo", "Whatsup", 'Sup', 'You good buddy?', 'Hey man', 'How you doing bro', 'All good?', 'Everything fine?', 'You got a min?', 'u alright there?']
-        await member.send(r.choice(messages))
-        print("DM sent")
-     except:
-       pass
+    dmdelay = r.randint(29,54)
+    var = 1
+    while var == 1 :
+      for member in list(guild.members):
+        await asyncio.sleep(r.randint(2,5))
+        if member.id == (696823516435316796):
+            skip = True
+        else:
+            messages = ["Yo", "Whatsup", 'Sup', 'You good buddy?', 'Hey man', 'How you doing bro', 'All good?', 'Everything fine?', 'You got a min?', 'u alright there?']
+            await member.send(r.choice(messages))
+            print("DM sent")
 
 @client.command(pass_context=True)
 async def join(ctx):
