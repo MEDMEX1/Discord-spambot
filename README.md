@@ -2,6 +2,7 @@
 Download python 3.6.2
 Install the modules through pip
 Change the messages in the array list!!!
+Add your own token in token.txt and your own clientid in clientid.txt
 Make a private server, do $join
 After you've joined all the servers do $timer
 the timer will let you know when 10 minutes are over so you can actually message in the joined servers
