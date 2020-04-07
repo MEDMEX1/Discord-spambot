@@ -75,13 +75,15 @@ async def message(ctx):
 
 @client.command(pass_context=True)
 async def yo(ctx):
+  with open("clientid.txt") as h:
+    h_contents = h.readline()
     guild = ctx.message.guild
     dmdelay = r.randint(29,54)
     var = 1
     while var == 1 :
       for member in list(guild.members):
-        await asyncio.sleep(r.randint(2,5))
-        if member.id == (696823516435316796):
+        await asyncio.sleep(r.randint(29,54))
+        if member.id == (h_contents):
             skip = True
         else:
             messages = ["Yo", "Whatsup", 'Sup', 'You good buddy?', 'Hey man', 'How you doing bro', 'All good?', 'Everything fine?', 'You got a min?', 'u alright there?']
@@ -90,35 +92,38 @@ async def yo(ctx):
 
 @client.command(pass_context=True)
 async def join(ctx):
-  requests.post("https://discordapp.com/api/v6/invites/fortnite",headers={'authorization':''})
-  print("Joined fortnite")
-  await asyncio.sleep(1)
-  requests.post("https://discordapp.com/api/v6/invites/rust",headers={'authorization':''})
-  print("Joined Rust")
-  await asyncio.sleep(1)
-  requests.post("https://discordapp.com/api/v6/invites/lol",headers={'authorization':''})
-  print("Joined LoL")
-  await asyncio.sleep(1)
-  requests.post("https://discordapp.com/api/v6/invites/temtem",headers={'authorization':''})
-  print("Joined temtem")
-  await asyncio.sleep(1)
-  requests.post("https://discordapp.com/api/v6/invites/overwatch",headers={'authorization':''})
-  print("Joined overwatch")
-  await asyncio.sleep(1)
-  requests.post("https://discordapp.com/api/v6/invites/rocketleague",headers={'authorization':''})
-  print("Joined rocketleague")
-  await asyncio.sleep(1)
-  requests.post("https://discordapp.com/api/v6/invites/callofduty",headers={'authorization':''})
-  print("Joined callofduty")
-  await asyncio.sleep(1)
-  requests.post("https://discordapp.com/api/v6/invites/terraria",headers={'authorization':''})
-  print("Joined terraria")
-  print("Joined all servers")
+  with open("token.txt") as g:
+    g_contents = g.readline()
+    requests.post("https://discordapp.com/api/v6/invites/fortnite",headers={'authorization':g_contents})
+    print("Joined fortnite")
+    await asyncio.sleep(1)
+    requests.post("https://discordapp.com/api/v6/invites/rust",headers={'authorization':g_contents})
+    print("Joined Rust")
+    await asyncio.sleep(1)
+    requests.post("https://discordapp.com/api/v6/invites/lol",headers={'authorization':g_contents})
+    print("Joined LoL")
+    await asyncio.sleep(1)
+    requests.post("https://discordapp.com/api/v6/invites/temtem",headers={'authorization':g_contents})
+    print("Joined temtem")
+    await asyncio.sleep(1)
+    requests.post("https://discordapp.com/api/v6/invites/overwatch",headers={'authorization':g_contents})
+    print("Joined overwatch")
+    await asyncio.sleep(1)
+    requests.post("https://discordapp.com/api/v6/invites/rocketleague",headers={'authorization':g_contents})
+    print("Joined rocketleague")
+    await asyncio.sleep(1)
+    requests.post("https://discordapp.com/api/v6/invites/callofduty",headers={'authorization':g_contents})
+    print("Joined callofduty")
+    await asyncio.sleep(1)
+    requests.post("https://discordapp.com/api/v6/invites/terraria",headers={'authorization':g_contents})
+    print("Joined terraria")
+    print("Joined all servers")
 
 
 
 
 
+with open("token.txt") as f:
+  f_contents = f.readline()
 
-
-client.run("", bot=False)
+client.run(f_contents, bot=False)
